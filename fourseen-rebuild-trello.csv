@@ -1,0 +1,22 @@
+Title,Description,Labels,List
+Audit existing Fourseen website,"Review current fourseen.com pages. Identify all existing content (text, images, PDFs, contact details). Note anything that must be preserved.","Planning;Content",DONE
+Save copy of current site content,"Copy all existing page text into a document. Save any images/logos locally. Keep as a fallback reference.","Planning;Content",DONE
+Define v1 site scope,"Confirm v1 pages: Home, What We Do, Approach, About, Contact. Explicitly exclude blog, CMS, extras.","Planning",DONE
+Create sitemap and navigation,"Define final navigation structure and logical page order. Ensure it matches HTML header navigation.","Planning;Content",DONE
+Draft page content in plain text,"Write content for all pages in content.md or a document. Each page includes H1, 2–4 sections, bullet points, CTA.","Content",DONE
+Install development tools,"Install VS Code, Git, and optionally Node.js LTS. Confirm folder-based workflow.","Dev;Process",DONE
+Create local project folder and files,"Create fourseen-site folder and add index.html, what-we-do.html, approach.html, about.html, contact.html, styles.css.","Dev",DONE
+Enable live preview with Live Server,"Install Live Server extension. Run site locally and confirm auto-refresh on save.","Dev;Process",DONE
+Build reusable page layout,"Create template.html with shared header, main, and footer. Duplicate layout across all pages.","Dev",DONE
+Implement mobile-first styling,"Define base typography, container width, spacing, buttons, and sections. Ensure layout works on mobile first.","Dev;UX",DONE
+Add contact CTA to all pages,"Add consistent Contact Strip inside <main> on every page. Ensure email/phone links work and header Contact button exists.","Dev;Content;UX",IN PROGRESS
+Create GitHub repository,"Create GitHub repo named fourseen-site. Decide public or private.","Dev;Process",TO DO
+Commit and push site code to GitHub,"Initialise Git repo locally. Commit all files and push to GitHub.","Dev;Process",TO DO
+Create Cloudflare account,"Sign up for Cloudflare and access dashboard.","Hosting",TO DO
+Deploy site to Cloudflare Pages,"Create Pages project. Connect GitHub repo. Framework: None. Build command blank. Output folder /.","Hosting;Dev",TO DO
+Add fourseen.com as custom domain,"Add fourseen.com and www.fourseen.com to Cloudflare Pages project. Note required DNS records.","Hosting",TO DO
+Update DNS at Njalla,"Update DNS records at Njalla or move DNS hosting to Cloudflare (recommended).","Hosting;Process",TO DO
+Add page titles and meta descriptions,"Ensure each page has a unique title and meta description.","SEO;Content",TO DO
+Accessibility and performance check,"Check mobile layout, contrast, alt text, and heading structure.","SEO;UX;Dev",TO DO
+Add sitemap.xml and robots.txt,"Create sitemap.xml and robots.txt and add to site root.","SEO;Dev",TO DO
+Establish update workflow,"Document update process: edit locally, commit + push, auto-deploy via Cloudflare.","Process",TO DO

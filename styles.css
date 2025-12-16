@@ -1,0 +1,254 @@
+/* ---------- Base / reset ---------- */
+:root{
+  --max: 1100px;
+  --pad: 18px;
+
+  --text: #111;
+  --muted: #4b5563;
+  --bg: #ffffff;
+  --border: #e5e7eb;
+
+  --accent: #0f172a;   /* you can change later */
+  --accent2: #111827;
+
+  --radius: 14px;
+}
+
+*{ box-sizing: border-box; }
+html, body { height: 100%; }
+body{
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.55;
+  color: var(--text);
+  background: var(--bg);
+}
+
+img{ max-width: 100%; height: auto; display: block; }
+a{ color: inherit; text-decoration: none; }
+a:hover{ text-decoration: underline; }
+
+/* Accessibility */
+.skip-link{
+  position: absolute;
+  left: -9999px;
+  top: auto;
+}
+.skip-link:focus{
+  left: var(--pad);
+  top: var(--pad);
+  background: #fff;
+  border: 2px solid var(--accent);
+  padding: 10px 12px;
+  border-radius: 10px;
+  z-index: 999;
+}
+
+/* ---------- Layout ---------- */
+.container{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--pad);
+}
+
+.section{
+  padding: 28px 0; /* mobile-first */
+}
+
+.section-muted{
+  background: #f9fafb;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+/* ---------- Header / Nav ---------- */
+.site-header{
+  position: sticky;
+  top: 0;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+  z-index: 50;
+}
+
+.header-inner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 0;
+}
+
+.brand{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-mark{
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--border);
+  font-weight: 800;
+  color: var(--accent);
+  background: #fff;
+}
+
+.brand-text{
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name{
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+
+.brand-tagline{
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* Mobile-first nav: wraps nicely instead of breaking */
+.site-nav{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.site-nav a{
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+
+.site-nav a:hover{
+  background: #f3f4f6;
+  text-decoration: none;
+}
+
+/* ---------- Typography ---------- */
+h1, h2, h3{
+  margin: 0 0 10px;
+  line-height: 1.15;
+}
+
+h1{
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+}
+
+h2{
+  font-size: clamp(1.25rem, 3vw, 1.6rem);
+  margin-top: 8px;
+}
+
+p{
+  margin: 0 0 12px;
+}
+
+.lead{
+  font-size: 1.05rem;
+  color: var(--muted);
+  max-width: 65ch;
+}
+
+/* ---------- Buttons / CTAs ---------- */
+.btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  font-weight: 700;
+  background: #fff;
+  text-decoration: none;
+}
+
+.btn:hover{
+  text-decoration: none;
+  background: #f9fafb;
+}
+
+.btn-primary{
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.btn-primary:hover{
+  background: var(--accent2);
+  border-color: var(--accent2);
+}
+
+.btn-secondary{
+  background: #fff;
+}
+
+.cta-row{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+/* ---------- Lists ---------- */
+.bullets{
+  margin: 12px 0 0;
+  padding-left: 18px;
+}
+.bullets li{
+  margin: 8px 0;
+  color: var(--muted);
+}
+
+/* ---------- Footer ---------- */
+.site-footer{
+  border-top: 1px solid var(--border);
+  padding: 22px 0;
+  color: var(--muted);
+}
+
+.footer-inner{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: space-between;
+}
+
+.footer-links{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+/* ---------- Desktop refinements ---------- */
+@media (min-width: 800px){
+  .section{ padding: 44px 0; }
+  .header-inner{ padding: 16px 0; }
+  .site-nav{ gap: 10px; }
+}
+/* Contact strip layout */
+.contact-strip{
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact-actions{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+@media (min-width: 800px){
+  .contact-strip{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
